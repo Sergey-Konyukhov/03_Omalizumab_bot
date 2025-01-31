@@ -217,7 +217,7 @@ def handle_text(message):
                     dose, frequency = find_dose(user_data[chat_id]['ig_level'], weight)
 
                     if dose:
-                        bot.send_message(chat_id, f"Рекомендуемая доза омализумаба: {dose} мг.")
+                        bot.send_message(chat_id, f"Рекомендуемая доза омализумаба: {int(dose)} мг.")
                         if frequency:
                             bot.send_message(chat_id, frequency)
                     else:
